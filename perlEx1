@@ -1,0 +1,18 @@
+exec(open("ft/ft/version.py").read())
+
+VERSION=_version_
+
+PACKAGE=find_packages('ft', exclude=['*.tests', '*.tests.*', 'tests.*', 'tests']
+)
+
+PACKAGE_DIR= {
+'':'ft'
+}
+
+PACKAGE_DATA = {
+  '':['']
+}
+
+AUTHER='SURENDRA'
+
+

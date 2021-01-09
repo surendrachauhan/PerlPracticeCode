@@ -1,0 +1,19 @@
+#! /usr/bin/cal
+
+case $# in
+0) set 'date'; m=$2; y=$6;; #no args : use today
+1) m=$1; set 'date'; y=$6;; # 1 arg: use this year
+*) m=$1 ; y=$2 ;; # 2 args : month and year
+esac
+
+case $m in
+jan*|Jan*) m=1;;
+feb*|Feb*) m=2;;
+[1-9]|10|11|12);;
+*)
+y=$m; m="";;
+esac
+
+/usr/bin/cal $m $y
+$
+
